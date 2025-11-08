@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap-rtl.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>يوتيوبي | نتائج البحث</title>
+  </head>
+  <body class="rtl">
+    <div id="top-menu">
+      <div class="container-fluid">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <a class="navbar-brand" href="index.html">يوتيوبي</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-lg-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">الفيديوهات المقترحة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ml-lg-3" href="#">المرفوعة حديثا</a>
+              </li>
+              <li class="nav-item mr-1">
+                <a class="nav-link" href="#">الفيديوهات الرائجة</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-outline-info text-info d-inline-block"
+                  href="index.html"
+                  data-toggle="modal"
+                  data-target="#loginmodal"
+                  >تسجيل الدخول</a
+                >
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="إبحث"
+              />
+              <button
+                onclick="location.href='search.html';"
+                class="btn btn-info my-2 my-sm-0"
+                type="submit"
+              >
+                إبحث
+              </button>
+            </div>
+          </div>
+        </nav>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="loginmodal"
+          data-backdrop="static"
+          data-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  تسجيل الدخول
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="email">البريد الإلكتروني</label>
+                  <input
+                    id="my-input"
+                    class="form-control"
+                    type="email"
+                    name="email"
+                  />
+                  <label for="password">كلمة المرور</label>
+                  <input
+                    id="password"
+                    class="form-control"
+                    type="password"
+                    name="password"
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="">نسيت كلمة المرور</a>
+                <a href="" class="mx-auto">انشاء حساب</a>
+                <button type="button" class="btn btn-primary">دخول</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="content p-5">
+          <h4 class="my-5">نتائج البحث</h4>
+          <div class="search-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-6">حوالي 60 نتيجة</div>
+                <div class="col-6 float-left">
+                  <span class="float-left"
+                    >تصفية <i class="fa-solid fa-filter"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="row pt-4">
+                <div class="col-md-4 col-lg-3">
+                  <div class="text-center">تاريخ التحميل</div>
+                  <hr />
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName1" />
+                    <span>آخر ساعة</span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName1" />
+                    <span>اليوم</span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName1" />
+                    <span>هذا الاسبوع</span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName1" />
+                    <span>هذا الشهر </span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName1" />
+                    <span>هذا العام</span>
+                  </label>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                  <div class="text-center">النوع</div>
+                  <hr />
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName2" />
+                    <span>فيديو </span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName2" />
+                    <span>قناة</span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName2" />
+                    <span>قائمة تشغيل </span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName2" />
+                    <span>فيلم </span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName2" />
+                    <span>عرض </span>
+                  </label>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                  <div class="text-center">التصنيف بحسب</div>
+                  <hr />
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName3" />
+                    <span>مدى الصلة </span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName3" />
+                    <span>تاريخ التجميل</span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName3" />
+                    <span>عدد المشاهدات </span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName3" />
+                    <span> التقييم </span>
+                  </label>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                  <div class="text-center">المدة</div>
+                  <hr />
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName4" />
+                    <span>اقل من 4 دقائق </span>
+                  </label>
+                  <label class="d-block">
+                    <input type="checkbox" name="inputName4" />
+                    <span>اكثر من 20 دقيقة </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cards -->
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mt-3">
+                <div class="card">
+                  <div class="card-horizontal d-md-flex d-block">
+                    <div class="img-square-wrapper">
+                      <a href="watch.html">
+                        <img
+                          class=""
+                          style="width: 300px"
+                          src="images/thumbnails/1.jpg"
+                          alt="Card image cap"
+                      /></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="watch.html">
+                        <h4 class="card-title">السر وراء سرعة البرمجة</h4>
+                      </a>
+                      <p class="card-text">
+                        السر وراء سرعة البرمجة يكمن في استخدام الأدوات والمكتبات
+                        بذكاء وحل المشكلات بطريقة منظمة. السر ليس بالسرعة فقط،
+                        بل بالتركيز والكفاءة في البرمجة.
+                      </p>
+                      <div
+                        class="card-footer d-flex flex-row justify-content-start py-3"
+                      >
+                        <div class="mr-4">
+                          <i class="fa-solid fa-film"></i>
+                          <span class="text-muted">482 ألف</span>
+                        </div>
+                        <div class="mr-4">
+                          <i class="fa-solid fa-clock"></i>
+                          <span class="text-muted">8:14</span>
+                        </div>
+                        <a href="channel.html" class="d-block">
+                          <img
+                            src="/images/pfps/1.jpg"
+                            class="rounded-circle object-fit-cover"
+                            width="30"
+                            height="30"
+                            alt="logo"
+                          />
+                          <span class="card-text">CodeVibes</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mt-3">
+                <div class="card">
+                  <div class="card-horizontal d-md-flex d-block">
+                    <div class="img-square-wrapper">
+                      <a href="watch.html">
+                        <img
+                          class=""
+                          style="width: 300px"
+                          src="images/thumbnails/2.jpg"
+                          alt="Card image cap"
+                      /></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="watch.html">
+                        <h4 class="card-title">10 حيل لرفع أداء حاسوبك</h4>
+                      </a>
+                      <p class="card-text">
+                        10 حيل لرفع أداء حاسوبك تساعدك على تسريع جهازك وتنظيف
+                        الملفات الغير ضرورية. باستخدام هذه الحيل، سيعمل حاسوبك
+                        بكفاءة أعلى ويقل البطء والتشنجات.
+                      </p>
+                      <div
+                        class="card-footer d-flex flex-row justify-content-start py-3"
+                      >
+                        <div class="mr-4">
+                          <i class="fa-solid fa-film"></i>
+                          <span class="text-muted">482 ألف</span>
+                        </div>
+                        <div class="mr-4">
+                          <i class="fa-solid fa-clock"></i>
+                          <span class="text-muted">8:14</span>
+                        </div>
+                        <a href="channel.html" class="d-block">
+                          <img
+                            src="/images/pfps/2.jpg"
+                            class="rounded-circle object-fit-cover"
+                            width="30"
+                            height="30"
+                            alt="logo"
+                          />
+                          <span class="card-text">CodeVibes</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mt-3">
+                <div class="card">
+                  <div class="card-horizontal d-md-flex d-block">
+                    <div class="img-square-wrapper">
+                      <a href="watch.html">
+                        <img
+                          class=""
+                          style="width: 300px"
+                          src="images/thumbnails/3.jpg"
+                          alt="Card image cap"
+                      /></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="watch.html">
+                        <h4 class="card-title">كيف بنيت موقع في ساعة واحدة</h4>
+                      </a>
+                      <p class="card-text">
+                        كيف بنيت موقع في ساعة واحدة يشرح خطوات إنشاء موقع كامل
+                        بسرعة وبدون تعقيد. ستتعلم استخدام الأدوات والقوالب
+                        الجاهزة لتوفير الوقت وتحقيق نتائج احترافية بسرعة.
+                      </p>
+                      <div
+                        class="card-footer d-flex flex-row justify-content-start py-3"
+                      >
+                        <div class="mr-4">
+                          <i class="fa-solid fa-film"></i>
+                          <span class="text-muted">482 ألف</span>
+                        </div>
+                        <div class="mr-4">
+                          <i class="fa-solid fa-clock"></i>
+                          <span class="text-muted">8:14</span>
+                        </div>
+                        <a href="channel.html" class="d-block">
+                          <img
+                            src="/images/pfps/3.jpg"
+                            class="rounded-circle object-fit-cover"
+                            width="30"
+                            height="30"
+                            alt="logo"
+                          />
+                          <span class="card-text">CodeVibes</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mt-3">
+                <div class="card">
+                  <div class="card-horizontal d-md-flex d-block">
+                    <div class="img-square-wrapper">
+                      <a href="watch.html">
+                        <img
+                          class=""
+                          style="width: 300px"
+                          src="images/thumbnails/4.jpg"
+                          alt="Card image cap"
+                      /></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="watch.html">
+                        <h4 class="card-title">
+                          نصائح React التي تمنيت معرفتها
+                        </h4>
+                      </a>
+                      <p class="card-text">
+                        نصائح React التي تمنيت معرفتها تكشف لك أفضل الممارسات
+                        لتطوير تطبيقات أسرع وأكثر كفاءة. ستتعلم كيفية تنظيم
+                        الكود، تحسين الأداء، واستغلال ميزات React بطريقة ذكية.
+                      </p>
+                      <div
+                        class="card-footer d-flex flex-row justify-content-start py-3"
+                      >
+                        <div class="mr-4">
+                          <i class="fa-solid fa-film"></i>
+                          <span class="text-muted">482 ألف</span>
+                        </div>
+                        <div class="mr-4">
+                          <i class="fa-solid fa-clock"></i>
+                          <span class="text-muted">8:14</span>
+                        </div>
+                        <a href="channel.html" class="d-block">
+                          <img
+                            src="/images/pfps/4.jpg"
+                            class="rounded-circle object-fit-cover"
+                            width="30"
+                            height="30"
+                            alt="logo"
+                          />
+                          <span class="card-text">CodeVibes</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mt-3">
+                <div class="card">
+                  <div class="card-horizontal d-md-flex d-block">
+                    <div class="img-square-wrapper">
+                      <a href="watch.html">
+                        <img
+                          class=""
+                          style="width: 300px"
+                          src="images/thumbnails/5.jpg"
+                          alt="Card image cap"
+                      /></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="watch.html">
+                        <h4 class="card-title">
+                          هذه أداة الذكاء الاصطناعي غيرت كل شيء
+                        </h4>
+                      </a>
+                      <p class="card-text">
+                        هذه أداة الذكاء الاصطناعي غيرت كل شيء تكشف عن طريقة
+                        استخدام الذكاء الاصطناعي لتبسيط المهام وتسريع العمل.
+                        ستتعرف على تأثيرها الكبير في حياتنا اليومية وفي تطوير
+                        المشاريع بشكل أسرع وأكثر ذكاء.
+                      </p>
+                      <div
+                        class="card-footer d-flex flex-row justify-content-start py-3"
+                      >
+                        <div class="mr-4">
+                          <i class="fa-solid fa-film"></i>
+                          <span class="text-muted">482 ألف</span>
+                        </div>
+                        <div class="mr-4">
+                          <i class="fa-solid fa-clock"></i>
+                          <span class="text-muted">8:14</span>
+                        </div>
+                        <a href="channel.html" class="d-block">
+                          <img
+                            src="/images/pfps/5.jpg"
+                            class="rounded-circle object-fit-cover"
+                            width="30"
+                            height="30"
+                            alt="logo"
+                          />
+                          <span class="card-text">CodeVibes</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/b6448fe1f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
